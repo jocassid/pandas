@@ -7531,13 +7531,15 @@ class NDFrame(PandasObject, SelectionMixin):
         ----------
         by : mapping, function, label, or list of labels
             Used to determine the groups for the groupby.
-            If ``by`` is a function, it's called on each value of the object's
-            index. If a dict or Series is passed, the Series or dict VALUES
-            will be used to determine the groups (the Series' values are first
-            aligned; see ``.align()`` method). If an ndarray is passed, the
-            values are used as-is determine the groups. A label or list of
-            labels may be passed to group by the columns in ``self``. Notice
-            that a tuple is interpreted a (single) key.
+            If ``by`` is a function - The function is called on each value 
+                of the object's index. 
+            If ``by`` is a dict or Series - The Series or dict VALUES
+                will be used to determine the groups (the Series' values are first
+                aligned; see ``.align()`` method). 
+            If ``by`` is a ndarray is passed, the values are used as-is 
+                determine the groups. 
+            If ``by`` is a label or list of labels may be passed to group by the columns in ``self``. 
+            Notice that a tuple is interpreted a (single) key.
         axis : {0 or 'index', 1 or 'columns'}, default 0
             Split along rows (0) or columns (1).
         level : int, level name, or sequence of such, default None
